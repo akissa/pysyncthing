@@ -369,4 +369,4 @@ Returns general statistics about folders.
 ## License
 
 All code is licensed under the
-[MPLv2 License](https://github.com/syncthing/syncthing/blob/master/LICENSE).
+[MPLv2 License](https://github.com/akissa/pysyncthing/blob/master/LICENSE).
