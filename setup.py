@@ -32,7 +32,6 @@ setup(name="pysyncthing",
       include_package_data=True,
       zip_safe=False,
       tests_require=['pytest'],
-      cmdclass={'test': PyTest},
       install_requires=['restkit'],
       classifiers=[
             'Development Status :: 1 - Planning',
