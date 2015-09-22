@@ -13,11 +13,9 @@ Copyright 2015, Andrew Colin Kissa
 Licensed under MPL 2.0.
 """
 from setuptools import setup, find_packages
-from setuptools.command.test import test as TestCommand
 
 
 version = "0.0.1"
-
 
 setup(name="pysyncthing",
       version=version,
@@ -31,10 +29,10 @@ setup(name="pysyncthing",
       packages=find_packages(exclude=['tests']),
       include_package_data=True,
       zip_safe=False,
-      tests_require=['pytest'],
+      tests_require=['mock', 'nose'],
       install_requires=['restkit'],
       classifiers=[
-            'Development Status :: 1 - Planning',
+            'Development Status :: 3 - Alpha',
             'Programming Language :: Python',
             'Programming Language :: Python :: 2.6',
             'Programming Language :: Python :: 2.7',
