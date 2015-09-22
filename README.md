@@ -196,7 +196,7 @@ Returns a `{"ping": "pong"}` object
 |Name|Type|Description|Mandatory?|
 |----|----|-----------|----------|
 |folder|string|Name of a database|Yes|
-|level|int|Depth of a list. Default is `0` — maximum depth|No|
+|level|int|Depth of a list. Default is `0` - maximum depth|No|
 |prefix|string|Path to directory or subdirectory to start from|No|
 
 
