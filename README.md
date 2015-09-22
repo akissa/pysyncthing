@@ -3,7 +3,8 @@
 
 ## Python bindings for Syncthing REST API
 
-This is a Python port of the [Ruby Syncthing REST API Bindings](https://github.com/retgoat/syncthing-ruby)
+This is a Python port of the [Ruby REST API Bindings](https://github.com/retgoat/syncthing-ruby)
+for [Syncthing](http://syncthing.net/)
 
 [![MPLv2 License](https://img.shields.io/badge/license-MPLv2-blue.svg?style=flat-square)](https://www.mozilla.org/MPL/2.0/)
 
