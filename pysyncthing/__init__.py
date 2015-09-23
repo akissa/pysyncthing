@@ -13,7 +13,9 @@ Copyright 2015, Andrew Colin Kissa
 Licensed under MPL 2.0.
 """
 
+from pysyncthing.version import version_info, __version__
 from pysyncthing.resource import SyncthingClient
 
 
+assert version_info
 assert SyncthingClient

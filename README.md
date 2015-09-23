@@ -87,7 +87,7 @@ Returns local discovery hash
 
 ```python
 >> c.get_discovery()
-=> {}
+{}
 ```
 
 ### new_error()
@@ -251,7 +251,7 @@ Returns ignores for given folder
 
 ```python
 >> c.get_ignores('ms-quarantine')
-=> {u'ignore': None, u'patterns': None}
+{u'ignore': None, u'patterns': None}
 ```
 
 ### new_ignores()
