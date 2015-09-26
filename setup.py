@@ -28,7 +28,7 @@ def get_readme():
             break
     try:
         if pandoc:
-            cmd = [pandoc, '-t', 'rst' 'README.md']
+            cmd = [pandoc, '-t', 'rst', 'README.md']
             long_description = os.popen(' '.join(cmd)).read()
         else:
             raise ValueError
