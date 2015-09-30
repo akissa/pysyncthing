@@ -33,7 +33,8 @@ Install from Githib
 Make a new instance of SyncthingClient with API key and Url.
 
 ```python
->> c = SyncthingClient.new('XX6406JTI3NH673QRHOGU840PL8702', 'https://192.168.1.26:8384')
+>> from pysyncthing import SyncthingClient
+>> c = SyncthingClient('XX6406JTI3NH673QRHOGU840PL8702', 'https://192.168.1.26:8384')
 ```
 
 ### get_version()
