@@ -63,12 +63,14 @@ ENDPOINTS = {
 }
 
 
+# pylint: disable=too-many-public-methods
 class SyncthingClient(Resource):
     """SyncthingClient class"""
+
     def __init__(self, api_key, api_url='https://127.0.0.1:8384', **kwargs):
         """Init"""
         super(SyncthingClient, self).__init__(api_url, ssl_version=3,
-                **kwargs)
+                                              **kwargs)
         self.api_key = api_key
 
     def _request_headers(self):
@@ -79,16 +81,16 @@ class SyncthingClient(Resource):
 
     def request(self, *args, **kwargs):
         """Make the request"""
-        response = super(SyncthingClient, self).request(*args,
-                        headers=self._request_headers(), **kwargs)
+        response = super(SyncthingClient, self).request(
+            *args, headers=self._request_headers(), **kwargs)
         if response.status_int == 200:
             body = response.body_string()
             if not len(body):
                 body = '{"code":%d,"message":"Completed successfully"}' % \
-                        response.status_int
+                    response.status_int
         else:
             raise PySyncthingError(code=response.status_int,
-                                    message=response.body_string())
+                                   message=response.body_string())
         return json.loads(body)
 
     def api_call(self, opts, body=None, **kwargs):
@@ -172,55 +174,55 @@ class SyncthingClient(Resource):
         """Browse Database"""
         params = {'folder': folder, 'level': level, 'prefix': prefix}
         return self.api_call(ENDPOINTS["db"]["browse"],
-                None, params_dict=params)
+                             None, params_dict=params)
 
     def get_completion(self, device_id, folder):
         """Gets completion stats"""
         params = {'device': device_id, 'folder': folder}
         return self.api_call(ENDPOINTS["db"]["completion"],
-                None, params_dict=params)
+                             None, params_dict=params)
 
     def get_file(self, filename):
         """Gets a file"""
         params = {'file': filename}
         return self.api_call(ENDPOINTS["db"]["file"],
-                None, params_dict=params)
+                             None, params_dict=params)
 
     def get_ignores(self, folder):
         """Gets ignores"""
         params = {'folder': folder}
         return self.api_call(ENDPOINTS["db"]["ignores"],
-                None, params_dict=params)
+                             None, params_dict=params)
 
     def new_ignores(self, folder, ignores):
         """Sets ignores"""
         params = {'folder': folder}
         return self.api_call(ENDPOINTS["db"]["new_ignores"],
-                ignores, params_dict=params)
+                             ignores, params_dict=params)
 
     def get_need(self, folder):
         """Gets need"""
         params = {'folder': folder}
         return self.api_call(ENDPOINTS["db"]["need"],
-                None, params_dict=params)
+                             None, params_dict=params)
 
     def assign_priority(self, folder, filename):
         """Assigns priority"""
         params = {'folder': folder, 'file': filename}
         return self.api_call(ENDPOINTS["db"]["prio"],
-                None, params_dict=params)
+                             None, params_dict=params)
 
     def scan(self, folder, subfolder=False):
         """Scans Database"""
         params = {'folder': folder, 'sub': subfolder}
         return self.api_call(ENDPOINTS["db"]["scan"],
-                None, params_dict=params)
+                             None, params_dict=params)
 
     def get_folder_status(self, folder):
         """Gets folder status"""
         params = {'folder': folder}
         return self.api_call(ENDPOINTS["db"]["status"],
-                None, params_dict=params)
+                             None, params_dict=params)
 
     # Stats
     def get_device_statistics(self):
