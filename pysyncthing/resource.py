@@ -81,8 +81,18 @@ class SyncthingClient(Resource):
 
     def request(self, *args, **kwargs):
         """Make the request"""
-        response = super(SyncthingClient, self).request(
-            *args, headers=self._request_headers(), **kwargs)
+        try:
+            response = super(SyncthingClient, self).request(
+                *args, headers=self._request_headers(), **kwargs)
+        except BaseException, err:
+            code = 520
+            if hasattr(err, 'status_int'):
+                code = err.status_int
+            if hasattr(err, 'message'):
+                message = err.message
+            else:
+                message = str(err)
+            raise PySyncthingError(code, message)
         if response.status_int == 200:
             body = response.body_string()
             if not len(body):
