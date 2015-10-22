@@ -41,7 +41,8 @@ def main():
     """Main"""
     version = load_source("version", os.path.join("pysyncthing", "version.py"))
 
-    opts = dict(name="pysyncthing",
+    opts = dict(
+        name="pysyncthing",
         version=version.__version__,
         description="Python bindings for Syncthing REST API",
         long_description=get_readme(),
@@ -65,7 +66,7 @@ def main():
             'License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)',
             'Natural Language :: English',
             'Operating System :: OS Independent'],
-            )
+        )
     setup(**opts)
 
 
