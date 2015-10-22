@@ -156,7 +156,7 @@ This should probably not be used during normal operations...
 
 ### upgrade()
 
-Check for the new veersion
+Check for the new version
 
 ```python
 >> c.upgrade()
@@ -264,7 +264,7 @@ Sets new ignores for given folder
 |Name|Type|Description|Mandatory?|
 |----|----|-----------|----------|
 | folder |string|folder|Yes|
-|ingores|object|ignore object like in `get_ignores` response|Yes|
+|ignores|object|ignore object like in `get_ignores` response|Yes|
 
 
 ```python
