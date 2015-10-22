@@ -63,6 +63,16 @@ ENDPOINTS = {
 }
 
 
+def tidy_params(params):
+    "clean up params"
+    newdict = {}
+    for key in params:
+        if params[key] is False:
+            continue
+        newdict[key] = params[key]
+    return newdict
+
+
 # pylint: disable=too-many-public-methods
 class SyncthingClient(Resource):
     """SyncthingClient class"""
@@ -72,6 +82,7 @@ class SyncthingClient(Resource):
         super(SyncthingClient, self).__init__(api_url, ssl_version=3,
                                               **kwargs)
         self.api_key = api_key
+        self.response = None
 
     def _request_headers(self):
         """Return the required API headers"""
@@ -82,7 +93,7 @@ class SyncthingClient(Resource):
     def request(self, *args, **kwargs):
         """Make the request"""
         try:
-            response = super(SyncthingClient, self).request(
+            self.response = super(SyncthingClient, self).request(
                 *args, headers=self._request_headers(), **kwargs)
         except BaseException, err:
             code = 520
@@ -93,20 +104,23 @@ class SyncthingClient(Resource):
             else:
                 message = str(err)
             raise PySyncthingError(code, message)
-        if response.status_int == 200:
-            body = response.body_string()
+        if self.response.status_int == 200:
+            body = self.response.body_string()
             if not len(body):
                 body = '{"code":%d,"message":"Completed successfully"}' % \
-                    response.status_int
+                    self.response.status_int
         else:
-            raise PySyncthingError(code=response.status_int,
-                                   message=response.body_string())
+            raise PySyncthingError(code=self.response.status_int,
+                                   message=self.response.body_string())
         return json.loads(body)
 
     def api_call(self, opts, body=None, **kwargs):
         """Setup the request"""
         if body:
             body = json.dumps(body)
+        if 'params_dict' in kwargs:
+            params = tidy_params(kwargs.get('params_dict'))
+            kwargs['params_dict'] = params
         return self.request(opts['method'], path=opts['name'],
                             payload=body, **kwargs)
 
