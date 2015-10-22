@@ -6,6 +6,9 @@
 This is a Python port of the [Ruby REST API Bindings](https://github.com/retgoat/syncthing-ruby)
 for [Syncthing](http://syncthing.net/)
 
+[![Build Status](https://travis-ci.org/akissa/pysyncthing.svg?branch=master)](https://travis-ci.org/akissa/pysyncthing)
+[![Code Climate](https://codeclimate.com/github/akissa/pysyncthing/badges/gpa.svg)](https://codeclimate.com/github/akissa/pysyncthing)
+[![Test Coverage](https://codeclimate.com/github/akissa/pysyncthing/badges/coverage.svg)](https://codeclimate.com/github/akissa/pysyncthing/coverage)
 [![MPLv2 License](https://img.shields.io/badge/license-MPLv2-blue.svg?style=flat-square)](https://www.mozilla.org/MPL/2.0/)
 
 ## Installation
