@@ -8,7 +8,7 @@ for [Syncthing](http://syncthing.net/)
 
 [![Build Status](https://travis-ci.org/akissa/pysyncthing.svg?branch=master)](https://travis-ci.org/akissa/pysyncthing)
 [![Code Climate](https://codeclimate.com/github/akissa/pysyncthing/badges/gpa.svg)](https://codeclimate.com/github/akissa/pysyncthing)
-[![Test Coverage](https://codeclimate.com/github/akissa/pysyncthing/badges/coverage.svg)](https://codeclimate.com/github/akissa/pysyncthing/coverage)
+[![codecov.io](https://codecov.io/github/akissa/pysyncthing/coverage.svg?branch=master)](https://codecov.io/github/akissa/pysyncthing?branch=master)
 [![MPLv2 License](https://img.shields.io/badge/license-MPLv2-blue.svg?style=flat-square)](https://www.mozilla.org/MPL/2.0/)
 
 ## Installation
