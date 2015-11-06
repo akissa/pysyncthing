@@ -4,9 +4,14 @@ from urlparse import urlparse
 
 from _st import HOST, PORT
 from pysyncthing.resource import ENDPOINTS
-# from pysyncthing.exceptions import PySyncthingError
+from pysyncthing.exceptions import PySyncthingError
 
 BASE_URL = 'http://%s:%s' % (HOST, PORT)
+
+
+@t.ApiRequest(url='http://127.0.0.1:8385')
+def test_connect_error(api):
+    t.raises(PySyncthingError, api.get_version)
 
 
 @t.ApiRequest()
