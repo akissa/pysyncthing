@@ -90,10 +90,10 @@ class SyncthingClient(Resource):
                 'User-Agent': 'pysyncthing',
                 'Content-Type': 'application/json'}
 
-    def request(self, *args, **kwargs):
+    def _request(self, *args, **kwargs):
         """Make the request"""
         try:
-            self.response = super(SyncthingClient, self).request(
+            self.response = self.request(
                 *args, headers=self._request_headers(), **kwargs)
         except BaseException, err:
             code = 520
@@ -121,8 +121,8 @@ class SyncthingClient(Resource):
         if 'params_dict' in kwargs:
             params = tidy_params(kwargs.get('params_dict'))
             kwargs['params_dict'] = params
-        return self.request(opts['method'], path=opts['name'],
-                            payload=body, **kwargs)
+        return self._request(
+            opts['method'], path=opts['name'], payload=body, **kwargs)
 
     # System
     def get_version(self):
