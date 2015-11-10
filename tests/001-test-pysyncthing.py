@@ -1,8 +1,10 @@
 import t
+import mock
 
 from urlparse import urlparse
 
-from _st import HOST, PORT
+from _st import HOST, PORT, TOKEN
+from pysyncthing import SyncthingClient
 from pysyncthing.resource import ENDPOINTS
 from pysyncthing.exceptions import PySyncthingError
 
@@ -12,6 +14,32 @@ BASE_URL = 'http://%s:%s' % (HOST, PORT)
 @t.ApiRequest(url='http://127.0.0.1:8385')
 def test_connect_error(api):
     t.raises(PySyncthingError, api.get_version)
+
+
+def test_exp_01():
+    with mock.patch.object(SyncthingClient, 'request') as mock_response:
+        code = 500
+        msg = 'Error occured'
+        mock_response.status_int = code
+        mock_response.body_string.return_value = msg
+        api = SyncthingClient(TOKEN, BASE_URL)
+        t.raises(PySyncthingError, api.get_version)
+
+
+def test_exp_02():
+    with mock.patch.object(SyncthingClient, 'request') as mock_response:
+        code = 500
+        msg = 'Error occured'
+        mock_response.side_effect = PySyncthingError(code=code, message=msg)
+        api = SyncthingClient(TOKEN, BASE_URL)
+        t.raises(PySyncthingError, api.get_version)
+
+
+def test_exp_03():
+    with mock.patch.object(SyncthingClient, 'request') as mock_response:
+        mock_response.side_effect = ValueError('Incorrect params')
+        api = SyncthingClient(TOKEN, BASE_URL)
+        t.raises(PySyncthingError, api.get_version)
 
 
 @t.ApiRequest()
