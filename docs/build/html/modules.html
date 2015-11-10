@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Modules &mdash; pysyncthing 0.0.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="pysyncthing 0.0.4 documentation" href="index.html" />
+    <link rel="prev" title="Usage" href="usage.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pysyncthing">
+<span id="modules"></span><h1>Modules<a class="headerlink" href="#module-pysyncthing" title="Permalink to this headline">¶</a></h1>
+<p>pysyncthing: Python bindings for Syncthing REST API</p>
+<p>Copyright 2015, Andrew Colin Kissa
+Licensed under MPL 2.0.</p>
+<dl class="class">
+<dt id="pysyncthing.SyncthingClient">
+<em class="property">class </em><code class="descclassname">pysyncthing.</code><code class="descname">SyncthingClient</code><span class="sig-paren">(</span><em>api_key</em>, <em>api_url='https://127.0.0.1:8384'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>SyncthingClient class</p>
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.api_call">
+<code class="descname">api_call</code><span class="sig-paren">(</span><em>opts</em>, <em>body=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.api_call" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup the request</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.assign_priority">
+<code class="descname">assign_priority</code><span class="sig-paren">(</span><em>folder</em>, <em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.assign_priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assigns priority</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.browse_databse">
+<code class="descname">browse_databse</code><span class="sig-paren">(</span><em>folder</em>, <em>level=False</em>, <em>prefix=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.browse_databse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Browse Database</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.clear_errors">
+<code class="descname">clear_errors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.clear_errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears errors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_completion">
+<code class="descname">get_completion</code><span class="sig-paren">(</span><em>device_id</em>, <em>folder</em><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_completion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets completion stats</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_config">
+<code class="descname">get_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets config</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_connections">
+<code class="descname">get_connections</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_connections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets connections</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_device_statistics">
+<code class="descname">get_device_statistics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_device_statistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets device Statistics</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_discovery">
+<code class="descname">get_discovery</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_discovery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets discovery</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_errors">
+<code class="descname">get_errors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets errors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_file">
+<code class="descname">get_file</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_folder_statistics">
+<code class="descname">get_folder_statistics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_folder_statistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets folder Statistics</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_folder_status">
+<code class="descname">get_folder_status</code><span class="sig-paren">(</span><em>folder</em><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_folder_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets folder status</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_ignores">
+<code class="descname">get_ignores</code><span class="sig-paren">(</span><em>folder</em><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_ignores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets ignores</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_insync">
+<code class="descname">get_insync</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_insync" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets config insync</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_need">
+<code class="descname">get_need</code><span class="sig-paren">(</span><em>folder</em><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_need" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets need</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_ping">
+<code class="descname">get_ping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_ping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets ping</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_status">
+<code class="descname">get_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets status</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_upgrade">
+<code class="descname">get_upgrade</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_upgrade" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if upgrades available</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.get_version">
+<code class="descname">get_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.get_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets version</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.new_config">
+<code class="descname">new_config</code><span class="sig-paren">(</span><em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.new_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets new config</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.new_error">
+<code class="descname">new_error</code><span class="sig-paren">(</span><em>error_body</em><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.new_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets new error</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.new_ignores">
+<code class="descname">new_ignores</code><span class="sig-paren">(</span><em>folder</em>, <em>ignores</em><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.new_ignores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets ignores</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.new_ping">
+<code class="descname">new_ping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.new_ping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets ping</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.restart">
+<code class="descname">restart</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.restart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restarts</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.scan">
+<code class="descname">scan</code><span class="sig-paren">(</span><em>folder</em>, <em>subfolder=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.scan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scans Database</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.shutdown">
+<code class="descname">shutdown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shutdown</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysyncthing.SyncthingClient.upgrade">
+<code class="descname">upgrade</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.SyncthingClient.upgrade" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs upgrade</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-pysyncthing.exceptions"></span><p>pysyncthing exceptions</p>
+<dl class="exception">
+<dt id="pysyncthing.exceptions.PySyncthingError">
+<em class="property">exception </em><code class="descclassname">pysyncthing.exceptions.</code><code class="descname">PySyncthingError</code><span class="sig-paren">(</span><em>code</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#pysyncthing.exceptions.PySyncthingError" title="Permalink to this definition">¶</a></dt>
+<dd><p>PySyncthing Exceptions</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="usage.html" title="previous chapter">Usage</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/modules.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Andrew Colin Kissa <andrew@topdog.za.net>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/modules.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
