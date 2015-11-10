@@ -3,6 +3,8 @@ import mock
 
 from urlparse import urlparse
 
+from restkit.errors import ResourceGone
+
 from _st import HOST, PORT, TOKEN
 from pysyncthing import SyncthingClient
 from pysyncthing.resource import ENDPOINTS
@@ -38,6 +40,13 @@ def test_exp_02():
 def test_exp_03():
     with mock.patch.object(SyncthingClient, 'request') as mock_response:
         mock_response.side_effect = ValueError('Incorrect params')
+        api = SyncthingClient(TOKEN, BASE_URL)
+        t.raises(PySyncthingError, api.get_version)
+
+
+def test_exp_04():
+    with mock.patch.object(SyncthingClient, 'request') as mock_response:
+        mock_response.side_effect = ResourceGone('Incorrect params')
         api = SyncthingClient(TOKEN, BASE_URL)
         t.raises(PySyncthingError, api.get_version)
 
