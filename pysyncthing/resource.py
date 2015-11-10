@@ -101,8 +101,6 @@ class SyncthingClient(Resource):
                 code = err.status_int
             if hasattr(err, 'message'):
                 message = err.message
-            else:
-                message = str(err)
             raise PySyncthingError(code, message)
         if self.response.status_int == 200:
             body = self.response.body_string()
