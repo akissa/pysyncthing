@@ -27,7 +27,7 @@ Install from Githib
 ## Usage
 
 Documentation is available in the [distribution](https://github.com/akissa/pysyncthing/blob/master/docs/)
-as well as on [readthedocs.org](http://pysyncthing.readthedocs.org)
+as well as on [readthedocs.org](https://pysyncthing.readthedocs.org)
 
 ## Contributing
 
