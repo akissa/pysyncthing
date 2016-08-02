@@ -8,7 +8,7 @@ for [Syncthing](http://syncthing.net/)
 
 [![Build Status](https://travis-ci.org/akissa/pysyncthing.svg?branch=master)](https://travis-ci.org/akissa/pysyncthing)
 [![Code Climate](https://codeclimate.com/github/akissa/pysyncthing/badges/gpa.svg)](https://codeclimate.com/github/akissa/pysyncthing)
-[![codecov.io](https://codecov.io/github/akissa/pysyncthing/coverage.svg?branch=master)](https://codecov.io/github/akissa/pysyncthing?branch=master)
+[![codecov](https://codecov.io/gh/akissa/pysyncthing/branch/master/graph/badge.svg)](https://codecov.io/gh/akissa/pysyncthing)
 [![Documentation Status](https://readthedocs.org/projects/pysyncthing/badge/?version=latest)](http://pysyncthing.readthedocs.org/en/latest/?badge=latest)
 [![MPLv2 License](https://img.shields.io/badge/license-MPLv2-blue.svg?style=flat-square)](https://www.mozilla.org/MPL/2.0/)
 
